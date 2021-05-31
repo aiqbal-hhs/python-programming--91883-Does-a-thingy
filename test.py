@@ -15,7 +15,7 @@ while x <= 10:
 name = input('what is your name?')
 print('hi ' + name)
 year = int(input('what year is it?'))
-self_age = int(input('what is your age?')
+self_age = int(input('what is your age?'))
 father_age = int(input('how old is your father?'))
 mother_age = int(input('how old is your mother?'))
 early_year = year - self_age
