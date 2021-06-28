@@ -9,11 +9,11 @@ ps4_total = num_ps4_games * ps4_game
 
 total = ps3_total + ps4_total
 
-if total > 100 and < 200:
+if total > 100 and total < 200:
   total *= 0.95
   print("you get a 5% discount for spending over 100 dollars")
   #5% discount
-elif total > 200 and < 300:
+elif total > 200 and total < 300:
   total *= 0.9
 	print("you get a 10% discount for spending over 200 dollars")
   #10% discount
