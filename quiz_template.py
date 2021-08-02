@@ -106,6 +106,5 @@ fifthq.lower()
         print("""That is wrong,
 crete is a greek island that was home to the wealthist
 city-state of ancient greece.""")
-
-
-
+elif fifthq == "the garden of hesperides":
+        print("That is incorrect, that is Hera's orchard which is found near portugal")
