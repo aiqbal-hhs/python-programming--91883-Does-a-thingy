@@ -105,7 +105,7 @@ fifthq.lower()
     elif fifth == "crete":
         print("""That is wrong,
 crete is a greek island that was home to the wealthist
-city-state of ancient greece at one point in time""")
+city-state of ancient greece.""")
 
 
 
