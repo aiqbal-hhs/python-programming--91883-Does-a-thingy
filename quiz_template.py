@@ -3,7 +3,8 @@ import time
 
 score = 0
 
-questions = ["What is you name?", "Are we ready to start?", "Who is the king of the Greek titans? Kronos, Zeus, Gaea, or Saturn?",  "Name one famous ancient Greek philosopher.",]
+questions = "What is you name?", "Are we ready to start?", "Who is the king of the Greek titans?: Kronos, Zeus, Gaea, or Saturn", "The Romans invented the aqueduct?", "How many tasks does Hecules proform?", "The Roman god Cupid is the depiction of which Greek god?", "Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides"  "Name one famous ancient Greek philosopher:"
+hardquestions = "Who is the founder of Rome?", "Name one ship that the Romans primarily used:"
 # asking name and welcome print
 name = input(questions[0])
 print("Welcome to this quiz {}!".format(name))
@@ -93,9 +94,7 @@ time.sleep(2)
 
 # Fifth Question - Multi choice
 print("Question five, Multiple choice")
-fifthq = input("""Tartarus, the prision of some Greek titans, is located where?:
-Mount Olympus, The underworld, Crete, or The garden of the Hesperides
-""")
+fifthq = input("Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides")
 fifthq.strip()
 fifthq.lower()
     if fifthq == "the underworld":
