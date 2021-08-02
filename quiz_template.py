@@ -3,8 +3,22 @@ import time
 
 score = 0
 
-questions = "What is you name?", "Are we ready to start?", "Who is the king of the Greek titans?: Kronos, Zeus, Gaea, or Saturn", "The Romans invented the aqueduct?", "How many tasks does Hecules proform?", "The Roman god Cupid is the depiction of which Greek god?", "Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides"  "Name one famous ancient Greek philosopher:"
+questions = "What is you name?", "Are we ready to start?", "Who is the king of the Greek titans?: Kronos, Zeus, Gaea, or Saturn", "The Romans invented the aqueduct?", "How many tasks does Hecules proform?", "The Roman god Cupid is the depiction of which Greek god?", "Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides"  "Name one famous ancient Greek philosopher:", "Romans where and are known to steal and develop concepts, inventions, architecture, and more. What is one of the few things that they invented?", "What is the earliest form of astrology"
 hardquestions = "Who is the founder of Rome?", "Name one ship that the Romans primarily used:"
+
+qonea = "kronos", "cronos", "cronus"
+qtwoa = "false"
+qthreea = 12
+qfoura = "eros"
+qfivea = "the underworld"
+qsixa = "socrates", "socrate", "plato", "aristotle", "thale", "pythagoras", "democritus", "empedokles", "anaxagoras", "anaximander", "epicurus"
+qsevena =
+qeighta =
+qninea =
+qtena =
+
+answers = qonea, qtwoa, qthreea, qfoura, qfivea, qsixa, qsevena, qeighta, qninea, qtena
+
 # asking name and welcome print
 name = input(questions[0])
 print("Welcome to this quiz {}!".format(name))
@@ -16,7 +30,7 @@ print("This quiz was made by me, Oliver MacClure.")
 # loop ask start quiz
 start = ""
 while start != "yes":
-    start = input("Are we ready to start?")
+    start = input(questions[1])
     start.strip()
     start.lower()
     if start == "yes":
@@ -27,12 +41,10 @@ while start != "yes":
 
 # First Question - Multi choice
 print("Question one, Multiple choice")
-firstq = input("""Who is the king of the Greek titans?
-Kronos, Zeus, Gaea, or Saturn?
-""")
+firstq = input(questions[2])
 firstq.strip()
 firstq.lower()
-    if firstq == "kronos" or firstq == "cronos" or firstq == "cronus":
+    if firstq in answers[0]:
         print("Correct, Kronos is the father of the greek gods and king of the titans!")
         score += 1
     elif firstq == "zeus":
@@ -48,10 +60,10 @@ time.sleep(2)
 
 # Second Question - True or False
 print("Question two, True or False")
-secondq = input("The Romans invented the aqueduct?")
+secondq = input(questions[3])
 secondq.strip()
 secondq.lower()
-    if secondq == "false":
+    if secondq in answers[1]:
         print("Correct, the Romans are thought to have taken the idea from Babylonians, Egyptians, and Assyrians")
         score += 1
     elif secondq == "true":
@@ -63,12 +75,12 @@ time.sleep(2)
 
 # Third Question - Type the number
 print("Question three, Type a Number")
-thirdq = int(input("How many tasks does Hecules proform?"))
+thirdq = int(input(questions[4]))
 thirdq.strip()
 thirdq.lower()
     if thirdq == 10:
         print("That is incorrect, It was the orignal number but it was changed.")
-    elif thirdq == 12:
+    elif thirdq in answers[2]:
         print("Correct, Hercules was forced to do 2 more tasks after he recieved pay and help for them.")
         score += 1
     else:
@@ -78,10 +90,10 @@ time.sleep(2)
 
 # Fourth Question - Write the answer
 print("Question four, Geuss the answer")
-fourthq = input("The Roman god Cupid is the depiction of which Greek god?")
+fourthq = input(questions[5])
 fourthq.strip()
 fourthq.lower()
-    if fourthq == "eros":
+    if fourthq in answers[3]:
         print("""Correct, He is the god of passion and fertility,
               and is sometimes considerred to be the male counterpart to his mother aphrodite!""")
         score += 1
@@ -94,10 +106,10 @@ time.sleep(2)
 
 # Fifth Question - Multi choice
 print("Question five, Multiple choice")
-fifthq = input("Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides")
+fifthq = input(questions[6])
 fifthq.strip()
 fifthq.lower()
-    if fifthq == "the underworld":
+    if fifthq in answers[4]:
         print("Correct, it is the deepest pit in the underworld.")
         score += 1
     elif fifthq == "mount olympus":
@@ -114,39 +126,66 @@ city-state of ancient greece.""")
 time.sleep(2)
 
 # Sixth Question - multi answer typing
-print("Multiple answer typed question")
-sixthq = input("Name one famous ancient Greek philosopher.")
+print("Question six, Multiple answer typing question")
+sixthq = input(questions[7])
 sithq.strip()
 sithq.lower()
-    if sixthq == "socrates":
-        print("That is correct, he is the founder of western philosophy and the first moral philosopher.")
-        score += 1
-    elif sixthq == "plato":
-        print("That is correct, an innovator of the written dialogue and dialectic forms in philosophy.")
-        score += 1
-    elif sixthq == "aristotle":
-        print("That is correct.")
-        score += 1
-    elif sixthq == "thale":
-        print("That is correct.")
-        score += 1
-    elif sixthq == "pythagoras":
-        print("That is correct.")
-        score += 1
-    elif sixthq == "democritus":
-        print("That is correct.")
-        score += 1
-    elif sixthq == "empedokles":
-        print("That is correct.")
-        score += 1
-    elif sixthq == "anaxagoras":
-        print("That is correct.")
-        score += 1
-    elif sixthq == "anaximander":
-        print("That is correct.")
-        score += 1
-    elif sixthq == "epicurus":
+    if sixthq in answers[5]:
         print("That is correct.")
         score += 1
     else:
         print("Sorry but I haven't heard of them.")
+
+time.sleep(2)
+
+# seventh question - multiple choice
+print("Question seven, ")
+seventhq = input(questions[8])
+seventhq.strip()
+seventhq.lower()
+    if seventhq in answers[6]:
+        print("That is correct, ")
+        score += 1
+    else:
+        print("")
+
+time.sleep(2)
+
+# eighth question - type the answer
+print("Question eight, ")
+eighthq = input(questions[9])
+eighthq.strip()
+eighthq.lower()
+    if eighthq in answers[7]:
+        print("That is correct, ")
+        score += 1
+    else:
+        print("")
+
+time.sleep(2)
+
+# ninth question - hardcore question - multi choice
+print("Question nine, ")
+ninthq = input(hardquestions[0])
+ninthq.strip()
+ninthq.lower()
+    if ninthq in answers[8]:
+        print("That is correct, ")
+        score += 1
+    else:
+        print("")
+
+time.sleep(2)
+
+# tenth question - hardcore question - type the answer
+print("Question ten, ")
+tenthq = input(hardquestions[1])
+tenthq.strip()
+tenthq.lower()
+    if seventhq in answers[9]:
+        print("That is correct, ")
+        score += 1
+    else:
+        print("")
+
+time.sleep(2)
