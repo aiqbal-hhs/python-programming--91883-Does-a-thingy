@@ -1,4 +1,4 @@
-# Import modules and big variables
+# Import modules - randomising
 import time
 import random
 
@@ -8,10 +8,13 @@ print(easyorder)
 print(hardorder)
 
 score = 0
+loop = 0
 
+# question list
 questions = "What is you name?", "Are we ready to start?", "Who is the king of the Greek titans?: Kronos, Zeus, Gaea, or Saturn", "The Romans invented the aqueduct?", "How many tasks does Hecules proform?", "The Roman god Cupid is the depiction of which Greek god?", "Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides"  "Name one famous ancient Greek philosopher:", "Romans where and are known to steal and develop concepts, inventions, architecture, and more. What is one of the few things that they invented?", "What is the earliest form of recorded astronomy?"
 hardquestions = "Who is the founder of Rome?", "Name one ship that the Romans primarily used:"
 
+# answer list
 onea = "kronos", "cronos", "cronus"
 twoa = "false"
 threea = 12
@@ -23,15 +26,17 @@ eighta = "babylonian", "babylon"
 ninea = "romulus", "romulus and remus", "remus and romulus"
 tena = "trireme", "quadrireme", "quinquereme"
 
+# stack all answers together
 answers = onea, twoa, threea, foura, fivea, sixa, sevena, eighta, ninea, tena
 
-# asking name and welcome print
+# asking name and welcome print - Quiz info and topic
 name = input(questions[0])
 print("Welcome to this quiz {}!".format(name))
 
-# Quiz info and topic
 print("This quiz is about classical history, inolving mythology, science, and historical figures.")
 print("This quiz was made by me, Oliver MacClure.")
+
+time.sleep(3)
 
 # loop ask start quiz
 start = ""
@@ -45,21 +50,39 @@ while start != "yes":
         print("Okay, i'll wait.")
         time.sleep(5)
 
-# First Question - Multi choice
-firstq = input(questions[2])
-firstq.strip()
-firstq.lower()
-    if firstq in answers[0]:
+# Question asking loop
+while loop != 10:
+    userinput = input(questions[random.choice(questions)]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# first question multi choice
+userinput = input(questions[2])
+userinput = userinput.strip()
+userinput = userinput.lower()
+    if userinput in answers[0]:
         print("Correct, Kronos is the father of the greek gods and king of the titans!")
         score += 1
-    elif firstq == "zeus":
+    elif userinput == "zeus":
         print("Wrong, Zeus is the king of the Greek gods.")
-    elif firstq == "gaea":
+    elif userinput == "gaea":
         print("Wrong, Gaea is Mother Earth, she gave birth to the titans.")
-    elif firstq == "saturn":
+    elif userinput == "saturn":
         print("Wrong, Saturn is the Roman depiction of him.")
     else:
-        print("Thats not an answer I told you!")
+        print("Thats not an option I gave you!")
 
 time.sleep(2)
 
@@ -188,3 +211,16 @@ tenthq.lower()
         print("that is incorrect, thats not one of the ships they used.")
 
 time.sleep(2)
+
+# End of quiz - Scoring and responce
+
+    if score == 0:
+        responce = "Maybe you should study some classics sometime."
+    elif score >= 1 and score <= 3:
+        responce = "You did well, not first or last, a nice spot. If you want higher though, study a little. : )"
+    elif score >= 4 and score <= 6:
+        responce = "Thats not too bad, it shows that you know somethings, congratulations."
+    elif score >= 7 and score <= 9:
+        responce = "WOW! thats like really really good!"
+    else score == 10:
+        responce = "Damn, well you sure know your stuff. Congratulations! You've earned it! : )"
