@@ -3,7 +3,7 @@ import time
 
 score = 0
 
-questions = "What is you name?", "Are we ready to start?", "Who is the king of the Greek titans?: Kronos, Zeus, Gaea, or Saturn", "The Romans invented the aqueduct?", "How many tasks does Hecules proform?", "The Roman god Cupid is the depiction of which Greek god?", "Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides"  "Name one famous ancient Greek philosopher:", "Romans where and are known to steal and develop concepts, inventions, architecture, and more. What is one of the few things that they invented?", "What is the earliest form of astrology"
+questions = "What is you name?", "Are we ready to start?", "Who is the king of the Greek titans?: Kronos, Zeus, Gaea, or Saturn", "The Romans invented the aqueduct?", "How many tasks does Hecules proform?", "The Roman god Cupid is the depiction of which Greek god?", "Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides"  "Name one famous ancient Greek philosopher:", "Romans where and are known to steal and develop concepts, inventions, architecture, and more. What is one of the few things that they invented?", "What is the earliest form of recorded astronomy?"
 hardquestions = "Who is the founder of Rome?", "Name one ship that the Romans primarily used:"
 
 qonea = "kronos", "cronos", "cronus"
@@ -12,10 +12,10 @@ qthreea = 12
 qfoura = "eros"
 qfivea = "the underworld"
 qsixa = "socrates", "socrate", "plato", "aristotle", "thale", "pythagoras", "democritus", "empedokles", "anaxagoras", "anaximander", "epicurus"
-qsevena =
-qeighta =
-qninea =
-qtena =
+qsevena = "concrete", "concreet", "underfloor heating", "heating", "house heating"
+qeighta = "babylonian", "babylon"
+qninea = "romulus", "romulus and remus", "remus and romulus"
+qtena = "trireme", "quadrireme", "quinquereme"
 
 answers = qonea, qtwoa, qthreea, qfoura, qfivea, qsixa, qsevena, qeighta, qninea, qtena
 
@@ -126,38 +126,38 @@ city-state of ancient greece.""")
 time.sleep(2)
 
 # Sixth Question - multi answer typing
-print("Question six, Multiple answer typing question")
+print("Question six, type the answer")
 sixthq = input(questions[7])
 sithq.strip()
 sithq.lower()
     if sixthq in answers[5]:
-        print("That is correct.")
+        print("That is correct, you know a philospher.")
         score += 1
     else:
         print("Sorry but I haven't heard of them.")
 
 time.sleep(2)
 
-# seventh question - multiple choice
-print("Question seven, ")
+# seventh question - guess the invention
+print("Question seven, type the answer")
 seventhq = input(questions[8])
 seventhq.strip()
 seventhq.lower()
     if seventhq in answers[6]:
-        print("That is correct, ")
+        print("That is correct, that is one of their few inventions.")
         score += 1
     else:
-        print("")
+        print("That is wrong, they did not invent that.")
 
 time.sleep(2)
 
 # eighth question - type the answer
-print("Question eight, ")
+print("Question eight, type the answer")
 eighthq = input(questions[9])
 eighthq.strip()
 eighthq.lower()
     if eighthq in answers[7]:
-        print("That is correct, ")
+        print("That is correct, the babylonian's are the earlisr recorded people to have used astronomy")
         score += 1
     else:
         print("")
@@ -165,27 +165,27 @@ eighthq.lower()
 time.sleep(2)
 
 # ninth question - hardcore question - multi choice
-print("Question nine, ")
+print("Question nine, hardcore question, multiple choice")
 ninthq = input(hardquestions[0])
 ninthq.strip()
 ninthq.lower()
     if ninthq in answers[8]:
-        print("That is correct, ")
+        print("That is correct, Romulus and his brother, Remus, founded Rome but Romulus killed his brother after the founding.")
         score += 1
     else:
-        print("")
+        print("thats wrong, thats not who founded rome, or may not them alone.")
 
 time.sleep(2)
 
 # tenth question - hardcore question - type the answer
-print("Question ten, ")
+print("Question ten, hardcore question, type the answer")
 tenthq = input(hardquestions[1])
 tenthq.strip()
 tenthq.lower()
     if seventhq in answers[9]:
-        print("That is correct, ")
+        print("That is correct, that is one of three ships that they primarily used.")
         score += 1
     else:
-        print("")
+        print("that is incorrect, thats not one of the ships they used.")
 
 time.sleep(2)
