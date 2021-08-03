@@ -1,23 +1,29 @@
 # Import modules and big variables
 import time
+import random
+
+easyorder = random.sample(range(0, 8), 8)
+hardorder = random.sample(range(0, 2), 2)
+print(easyorder)
+print(hardorder)
 
 score = 0
 
 questions = "What is you name?", "Are we ready to start?", "Who is the king of the Greek titans?: Kronos, Zeus, Gaea, or Saturn", "The Romans invented the aqueduct?", "How many tasks does Hecules proform?", "The Roman god Cupid is the depiction of which Greek god?", "Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides"  "Name one famous ancient Greek philosopher:", "Romans where and are known to steal and develop concepts, inventions, architecture, and more. What is one of the few things that they invented?", "What is the earliest form of recorded astronomy?"
 hardquestions = "Who is the founder of Rome?", "Name one ship that the Romans primarily used:"
 
-qonea = "kronos", "cronos", "cronus"
-qtwoa = "false"
-qthreea = 12
-qfoura = "eros"
-qfivea = "the underworld"
-qsixa = "socrates", "socrate", "plato", "aristotle", "thale", "pythagoras", "democritus", "empedokles", "anaxagoras", "anaximander", "epicurus"
-qsevena = "concrete", "concreet", "underfloor heating", "heating", "house heating"
-qeighta = "babylonian", "babylon"
-qninea = "romulus", "romulus and remus", "remus and romulus"
-qtena = "trireme", "quadrireme", "quinquereme"
+onea = "kronos", "cronos", "cronus"
+twoa = "false"
+threea = 12
+foura = "eros"
+fivea = "the underworld"
+sixa = "socrates", "socrate", "plato", "aristotle", "thale", "pythagoras", "democritus", "empedokles", "anaxagoras", "anaximander", "epicurus"
+sevena = "concrete", "concreet", "underfloor heating", "heating", "house heating"
+eighta = "babylonian", "babylon"
+ninea = "romulus", "romulus and remus", "remus and romulus"
+tena = "trireme", "quadrireme", "quinquereme"
 
-answers = qonea, qtwoa, qthreea, qfoura, qfivea, qsixa, qsevena, qeighta, qninea, qtena
+answers = onea, twoa, threea, foura, fivea, sixa, sevena, eighta, ninea, tena
 
 # asking name and welcome print
 name = input(questions[0])
@@ -40,7 +46,6 @@ while start != "yes":
         time.sleep(5)
 
 # First Question - Multi choice
-print("Question one, Multiple choice")
 firstq = input(questions[2])
 firstq.strip()
 firstq.lower()
@@ -59,7 +64,6 @@ firstq.lower()
 time.sleep(2)
 
 # Second Question - True or False
-print("Question two, True or False")
 secondq = input(questions[3])
 secondq.strip()
 secondq.lower()
@@ -74,12 +78,11 @@ secondq.lower()
 time.sleep(2)
 
 # Third Question - Type the number
-print("Question three, Type a Number")
 thirdq = int(input(questions[4]))
 thirdq.strip()
 thirdq.lower()
     if thirdq == 10:
-        print("That is incorrect, It was the orignal number but it was changed.")
+        print("That is incorrect, it was the orignal number of tasks but it was changed.")
     elif thirdq in answers[2]:
         print("Correct, Hercules was forced to do 2 more tasks after he recieved pay and help for them.")
         score += 1
@@ -89,7 +92,6 @@ thirdq.lower()
 time.sleep(2)
 
 # Fourth Question - Write the answer
-print("Question four, Geuss the answer")
 fourthq = input(questions[5])
 fourthq.strip()
 fourthq.lower()
@@ -105,7 +107,6 @@ fourthq.lower()
 time.sleep(2)
 
 # Fifth Question - Multi choice
-print("Question five, Multiple choice")
 fifthq = input(questions[6])
 fifthq.strip()
 fifthq.lower()
@@ -114,7 +115,7 @@ fifthq.lower()
         score += 1
     elif fifthq == "mount olympus":
         print("That is incorrect, mount olympus is the home of the gods.")
-    elif fifth == "crete":
+    elif fifthq == "crete":
         print("""That is wrong,
 crete is a greek island that was home to the wealthist
 city-state of ancient greece.""")
@@ -126,7 +127,6 @@ city-state of ancient greece.""")
 time.sleep(2)
 
 # Sixth Question - multi answer typing
-print("Question six, type the answer")
 sixthq = input(questions[7])
 sithq.strip()
 sithq.lower()
@@ -139,7 +139,6 @@ sithq.lower()
 time.sleep(2)
 
 # seventh question - guess the invention
-print("Question seven, type the answer")
 seventhq = input(questions[8])
 seventhq.strip()
 seventhq.lower()
@@ -152,20 +151,21 @@ seventhq.lower()
 time.sleep(2)
 
 # eighth question - type the answer
-print("Question eight, type the answer")
 eighthq = input(questions[9])
 eighthq.strip()
 eighthq.lower()
     if eighthq in answers[7]:
-        print("That is correct, the babylonian's are the earlisr recorded people to have used astronomy")
+        print("That is correct, the babylonian's are the earliest recorded people to have used astronomy")
         score += 1
     else:
-        print("")
+        print("That is incorrect, thats not the earliest civilization")
 
 time.sleep(2)
 
+# Hard questions - Start
+print("Get ready because the hard questions are starting.")
+
 # ninth question - hardcore question - multi choice
-print("Question nine, hardcore question, multiple choice")
 ninthq = input(hardquestions[0])
 ninthq.strip()
 ninthq.lower()
@@ -173,12 +173,11 @@ ninthq.lower()
         print("That is correct, Romulus and his brother, Remus, founded Rome but Romulus killed his brother after the founding.")
         score += 1
     else:
-        print("thats wrong, thats not who founded rome, or may not them alone.")
+        print("thats wrong, thats not who founded rome, or maybe not them alone.")
 
 time.sleep(2)
 
 # tenth question - hardcore question - type the answer
-print("Question ten, hardcore question, type the answer")
 tenthq = input(hardquestions[1])
 tenthq.strip()
 tenthq.lower()
