@@ -9,9 +9,13 @@ print(hardorder)
 
 score = 0
 loop = 0
+userinput = ""
+
+# one in different languages
+langone = "Tahi", "one", "uno", "", "",
 
 # question list
-questions = "What is you name?", "Are we ready to start?", "Who is the king of the Greek titans?: Kronos, Zeus, Gaea, or Saturn", "The Romans invented the aqueduct?", "How many tasks does Hecules proform?", "The Roman god Cupid is the depiction of which Greek god?", "Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides"  "Name one famous ancient Greek philosopher:", "Romans where and are known to steal and develop concepts, inventions, architecture, and more. What is one of the few things that they invented?", "What is the earliest form of recorded astronomy?"
+questions = "What is you name?", "Are we ready to start?", "Who is the king of the Greek titans?: Kronos, Zeus, Gaea, or Saturn", "The Romans invented the aqueduct?", "How many tasks does Hecules proform?", "The Roman god Cupid is the depiction of which Greek god?", "Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides"  "Name one famous ancient Greek philosopher:", "Romans where and are known to steal and develop inventions, architecture, and more. What is one of the few things that they invented?", "What is the earliest form of recorded astronomy?"
 hardquestions = "Who is the founder of Rome?", "Name one ship that the Romans primarily used:"
 
 # answer list
@@ -52,15 +56,11 @@ while start != "yes":
 
 # Question asking loop
 while loop != 10:
-    userinput = input(questions[random.choice(questions)]
-
-
-
-
-
-
-
-
+    userinput = input(random.choice(questions))
+    userinput = userinput.strip()
+    userinput = userinput.lower()
+    if userinput in answers:
+        print("Correct, you get {} point!".format(langone))
 
 
 
