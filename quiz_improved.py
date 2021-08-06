@@ -7,10 +7,13 @@ hardorder = random.sample(range(0, 2), 2)
 print(easyorder)
 print(hardorder)
 
+selection = 2, 3, 4, 5, 6, 7, 8, 9
+random.shuffle(selection)
 score = 0
 loop = 0
 userinput = ""
-num = random.randint(2, 9)
+place = 0
+num = selection[place]
 
 # one in different languages
 langone = "Tahi", "one", "uno", "", "",
@@ -32,7 +35,7 @@ ninea = "romulus", "romulus and remus", "remus and romulus"
 tena = "trireme", "quadrireme", "quinquereme"
 
 # stack all answers together
-answers = "name", "yes", onea, twoa, threea, foura, fivea, sixa, sevena, eighta, ninea, tena
+answers = "yes", onea, twoa, threea, foura, fivea, sixa, sevena, eighta, ninea, tena
 
 # asking name and welcome print - Quiz info and topic
 name = input(questions[0])
@@ -49,7 +52,7 @@ while start != "yes":
     start = input(questions[1])
     start.strip()
     start.lower()
-    if start == answers[1]:
+    if start == answers[0]:
         print("righty-O then, lets get started!")
     else:
         print("Okay, i'll wait.")
@@ -61,38 +64,41 @@ while start != "yes":
 
 # easy Question asking loop
 while loop != 8:
-    userinput = input(questions[num])
+    if num == 4:
+        userinput = int(input(questions[num]))
+    else:
+        userinput = input(questions[num])
     userinput = userinput.strip()
     userinput = userinput.lower()
+    num -= 1
     if userinput in answers[num]:
         print("Correct, you get {} point!".format(langone))
 
-
+    time.sleep(1)
     loop += 1
-    num = random.randint(2, 9)
+    place += 1
+    num = selection[place]
 
 loop = 0
 num = random.randint(0, 1)
 
 
 
-# hard question asking loop
+# Hard Question asking loop
 while loop != 2:
     userinput = input(hardquestions[num])
     userinput = userinput.strip()
     userinput = userinput.lower()
-    num += 10
+    num += 9
     if userinput in answers[num]:
         print("Correct, you get {} point!".format(langone))
 
+    time.sleep(1)
     loop += 1
-    num = random.randint(0, 1)
-
-
-
-
-
-
+    if num == 0:
+        num += 1
+    elif num == 1:
+        num -= 1
 
 # first question multi choice
 userinput = input(questions[2])
@@ -110,7 +116,7 @@ userinput = userinput.lower()
     else:
         print("Thats not an option I gave you!")
 
-time.sleep(2)
+time.sleep(1)
 
 # Second Question - True or False
 secondq = input(questions[3])
