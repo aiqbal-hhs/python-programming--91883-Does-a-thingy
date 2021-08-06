@@ -1,18 +1,7 @@
 # Import modules - randomising
 import time
-import random
-
-easyorder = random.sample(range(0, 8), 8)
-hardorder = random.sample(range(0, 2), 2)
-print(easyorder)
-print(hardorder)
 
 score = 0
-loop = 0
-userinput = ""
-
-# one in different languages
-langone = "Tahi", "one", "uno", "", "",
 
 # question list
 questions = "What is you name?", "Are we ready to start?", "Who is the king of the Greek titans?: Kronos, Zeus, Gaea, or Saturn", "The Romans invented the aqueduct?", "How many tasks does Hecules proform?", "The Roman god Cupid is the depiction of which Greek god?", "Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides"  "Name one famous ancient Greek philosopher:", "Romans where and are known to steal and develop inventions, architecture, and more. What is one of the few things that they invented?", "What is the earliest form of recorded astronomy?"
@@ -31,7 +20,7 @@ ninea = "romulus", "romulus and remus", "remus and romulus"
 tena = "trireme", "quadrireme", "quinquereme"
 
 # stack all answers together
-answers = onea, twoa, threea, foura, fivea, sixa, sevena, eighta, ninea, tena
+answers = "name", "yes", onea, twoa, threea, foura, fivea, sixa, sevena, eighta, ninea, tena
 
 # asking name and welcome print - Quiz info and topic
 name = input(questions[0])
@@ -48,31 +37,17 @@ while start != "yes":
     start = input(questions[1])
     start.strip()
     start.lower()
-    if start == "yes":
+    if start == answers[1]:
         print("righty-O then, lets get started!")
     else:
         print("Okay, i'll wait.")
         time.sleep(5)
 
-# Question asking loop
-while loop != 10:
-    userinput = input(random.choice(questions))
-    userinput = userinput.strip()
-    userinput = userinput.lower()
-    if userinput in answers:
-        print("Correct, you get {} point!".format(langone))
-
-
-
-
-
-
-
 # first question multi choice
-userinput = input(questions[2])
-userinput = userinput.strip()
-userinput = userinput.lower()
-    if userinput in answers[0]:
+firstq = input(questions[2])
+firstq = firstq.strip()
+firstq = firstq.lower()
+    if firstq in answers[2]:
         print("Correct, Kronos is the father of the greek gods and king of the titans!")
         score += 1
     elif userinput == "zeus":
@@ -90,7 +65,7 @@ time.sleep(2)
 secondq = input(questions[3])
 secondq.strip()
 secondq.lower()
-    if secondq in answers[1]:
+    if secondq in answers[3]:
         print("Correct, the Romans are thought to have taken the idea from Babylonians, Egyptians, and Assyrians")
         score += 1
     elif secondq == "true":
@@ -106,7 +81,7 @@ thirdq.strip()
 thirdq.lower()
     if thirdq == 10:
         print("That is incorrect, it was the orignal number of tasks but it was changed.")
-    elif thirdq in answers[2]:
+    elif thirdq in answers[4]:
         print("Correct, Hercules was forced to do 2 more tasks after he recieved pay and help for them.")
         score += 1
     else:
@@ -118,7 +93,7 @@ time.sleep(2)
 fourthq = input(questions[5])
 fourthq.strip()
 fourthq.lower()
-    if fourthq in answers[3]:
+    if fourthq in answers[5]:
         print("""Correct, He is the god of passion and fertility,
               and is sometimes considerred to be the male counterpart to his mother aphrodite!""")
         score += 1
@@ -133,7 +108,7 @@ time.sleep(2)
 fifthq = input(questions[6])
 fifthq.strip()
 fifthq.lower()
-    if fifthq in answers[4]:
+    if fifthq in answers[6]:
         print("Correct, it is the deepest pit in the underworld.")
         score += 1
     elif fifthq == "mount olympus":
@@ -153,7 +128,7 @@ time.sleep(2)
 sixthq = input(questions[7])
 sithq.strip()
 sithq.lower()
-    if sixthq in answers[5]:
+    if sixthq in answers[7]:
         print("That is correct, you know a philospher.")
         score += 1
     else:
@@ -165,7 +140,7 @@ time.sleep(2)
 seventhq = input(questions[8])
 seventhq.strip()
 seventhq.lower()
-    if seventhq in answers[6]:
+    if seventhq in answers[8]:
         print("That is correct, that is one of their few inventions.")
         score += 1
     else:
@@ -177,7 +152,7 @@ time.sleep(2)
 eighthq = input(questions[9])
 eighthq.strip()
 eighthq.lower()
-    if eighthq in answers[7]:
+    if eighthq in answers[9]:
         print("That is correct, the babylonian's are the earliest recorded people to have used astronomy")
         score += 1
     else:
@@ -192,7 +167,7 @@ print("Get ready because the hard questions are starting.")
 ninthq = input(hardquestions[0])
 ninthq.strip()
 ninthq.lower()
-    if ninthq in answers[8]:
+    if ninthq in answers[10]:
         print("That is correct, Romulus and his brother, Remus, founded Rome but Romulus killed his brother after the founding.")
         score += 1
     else:
@@ -204,7 +179,7 @@ time.sleep(2)
 tenthq = input(hardquestions[1])
 tenthq.strip()
 tenthq.lower()
-    if seventhq in answers[9]:
+    if seventhq in answers[11]:
         print("That is correct, that is one of three ships that they primarily used.")
         score += 1
     else:
