@@ -16,7 +16,7 @@ place = 0
 num = selection[place]
 
 # one in different languages
-langone = "Tahi", "one", "uno", "", "",
+langone = "Tahi", "one", "uno", "vienas", "une", "unus", "ένας"
 
 # question list
 questions = "What is you name?", "Are we ready to start?", "Who is the king of the Greek titans?: Kronos, Zeus, Gaea, or Saturn", "The Romans invented the aqueduct?", "How many tasks does Hecules proform?", "The Roman god Cupid is the depiction of which Greek god?", "Tartarus, the prision of some Greek titans, is located where?: Mount Olympus, The underworld, Crete, or The garden of the Hesperides"  "Name one famous ancient Greek philosopher:", "Romans where and are known to steal and develop inventions, architecture, and more. What is one of the few things that they invented?", "What is the earliest form of recorded astronomy?"
