@@ -17,21 +17,28 @@ selectone = random.randint(0, 7)
 langone = "Tahi", "One", "Uno", "Vienas", "Une", "Unus", "ένας"
 
 # question list
-naneq = "What is you name? \n"
+naneq = "What is your name? \n"
 startq = "Are we ready to start? \n"
 firsq = "Who's the king of the Greek titans?:\nKronos, Zeus, Gaea, or Saturn\n"
 secondq = "True or False: The Romans invented the aqueduct? \n"
 thirdq = "How many tasks does Hecules proform? \n"
 fourthq = "The Roman god Cupid is the depiction of which Greek god? \n"
-fifthq = "Tartarus is located where?:\nMount Olympus, The Underworld, Crete, or Africa\n"
+fifthq = """Tartarus is located where?:
+Mount Olympus, The Underworld, Crete, or Africa
+"""
 sixthq = "Name one famous ancient Greek philosopher: \n"
-seventhq = "Romans where and are known to steal\nand then develop inventions, architecture, and more.\nWhat is one of their inventions?\n"
+seventhq = """Romans are known to steal, then develop
+inventions, architecture, and more.
+What is one of their inventions?
+"""
 eightq = "What is the earliest form of recorded astronomy? \n"
 ninthq = "Who is the founder of Rome? \n"
 tenthq = "Name one ship that the Romans primarily used: \n"
 
 # Stacko taco question
-questions = nameq, startq, firstq, secondq, thirdq, fourthq, fifthq, sixthq, seventhq, eigthq, ninthq, tenthq
+questions = [nameq, startq, firstq, secondq, thirdq, fourthq]
+otherhalf = [fifthq, sixthq, seventhq, eigthq, ninthq, tenthq]
+questions.extend(otherhalf)
 
 # answer list
 onea = "kronos", "cronos", "cronus"
@@ -39,20 +46,28 @@ twoa = "false"
 threea = "12"
 foura = "eros"
 fivea = "the underworld"
-sixa = "socrates", "socrate", "plato", "aristotle", "thale", "pythagoras", "democritus", "empedokles", "anaxagoras", "anaximander", "epicurus"
+sixa = ["socrates", "socrate", "plato", "aristotle", "thale", "pythagoras"]
+sixb = ["democritus", "empedokles", "anaxagoras", "anaximander", "epicurus"]
+sixa.extend(sixb)
 sevena = "concrete", "underfloor heating", "heating", "house heating"
 eighta = "babylonian", "babylon"
 ninea = "romulus", "romulus and remus", "remus and romulus"
 tena = "trireme", "quadrireme", "quinquereme"
 
 # stack all answers together
-answers = "yes", onea, twoa, threea, foura, fivea, sixa, sevena, eighta, ninea, tena
+answers = "yes", onea, twoa, threea, foura, fivea
+answerssecond = sixa, sevena, eighta, ninea, tena
+answers.extend(answerssecond)
 
 # correct statements
 stateone = "Kronos is the father of the greek gods and king of the titans!"
-statetwo = "The Romans are thought to have taken the idea from Babylonians, Egyptians, and Assyrians"
-statethree = "Hercules was forced to do 2 more tasks after he recieved pay and help for them."
-statefour = "He is the god of passion and fertility,\nand is sometimes considerred to be the male counterpart to his mother aphrodite!"
+statetwo = """People think romans took the idea
+from Babylonians, Egyptians, and Assyrians"""
+statethree = """Hercules was forced to do 2 more tasks
+to replace the ones he recieved pay or help for."""
+statefour = """He is the god of passion and fertility
+and is sometimes considerred to be the male counterpart
+to his mother aphrodite!"""
 statefive = "It is the holding place of monsters and some greek titans."
 statesix = "You know a philospher."
 stateseven = "That is one of their few inventions."
@@ -61,7 +76,9 @@ statenine = "Romulus and Remus founded Rome \n but Romulus soon killed remus."
 stateten = "That is one of three ships that they primarily used."
 
 # condensing the statements into one
-statements = "zero", stateone, statetwo, statethree, statefour, statefive, statesix, stateseven, stateight, statenine, stateten
+statements = "zero", stateone, statetwo, statethree, statefour
+statement = statefive, statesix, stateseven, stateight, statenine, stateten
+staements.extend(statement)
 
 # asking name and welcome print - Quiz info and topic
 name = input(questions[0])

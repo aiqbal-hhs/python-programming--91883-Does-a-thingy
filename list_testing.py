@@ -1,7 +1,10 @@
 x = 0
 
 three = "three"
-answer = "one", "two", three
+four = "four"
+addin = [three, four]
+answer = ["one", "two"]
+answer.extend(addin)
 
 while x < 5:
     firstq = input("list a number: ")
