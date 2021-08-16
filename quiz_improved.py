@@ -1,4 +1,4 @@
-# Import modules - randomising
+# Import modules - randomising numbers - variables
 import time
 import random
 
@@ -6,11 +6,12 @@ selection = 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
 preshuffle = list(selection)
 random.shuffle(preshuffle)
 selection = tuple(preshuffle)
+place = 0
+num = selection[place]
+check = False
 score = 0
 loop = 0
 userinput = ""
-place = 0
-num = selection[place]
 selectone = random.randint(0, 7)
 
 # one in different languages
@@ -35,7 +36,7 @@ eightq = "What is the earliest form of recorded astronomy? \n"
 ninthq = "Who is the founder of Rome? \n"
 tenthq = "Name one ship that the Romans primarily used: \n"
 
-# Stacko taco question
+# Stacko taco questo
 questions = [nameq, startq, firstq, secondq, thirdq, fourthq]
 otherhalf = [fifthq, sixthq, seventhq, eigthq, ninthq, tenthq]
 questions.extend(otherhalf)
@@ -80,7 +81,7 @@ statements = "zero", stateone, statetwo, statethree, statefour
 statement = statefive, statesix, stateseven, stateight, statenine, stateten
 staements.extend(statement)
 
-# asking name and welcome print - Quiz info and topic
+# asking name and welcome print - provide Quiz info and topic
 name = input(questions[0])
 
 print("Welcome to this quiz {}!".format(name))
@@ -103,18 +104,28 @@ while start != "yes":
         print("Okay, i'll wait.")
         time.sleep(5)
 
-# easy Question asking loop
+# Question asking loop
+# Check loop number under 11
 while loop != 11:
-    userinput = input(questions[num])
-    userinput = userinput.strip()
-    userinput = userinput.lower()
+    while check is False:
+        # ask input - then lower and remove spaces
+        userinput = input(questions[num])
+        userinput = userinput.strip()
+        userinput = userinput.lower()
+        if(len(userinput)):
+            print(questions[num])
+            check = False
+        else:
+            check = True
+    # lower var num to check answer - I have one less answer than question
     num -= 1
-    if userinput in answers[num]:
-        print("Correct, {}".format(statements[num]))
-        print("You get {} point!".format(langone[selectone]))
-        score += 1
-    else:
-        print("Wrong, that wasn't the answer.")
+    # checks if userinput is one of the answers for that question
+        if userinput in answers[num]:
+            print("Correct, {}".format(statements[num]))
+            print("You get {} point!".format(langone[selectone]))
+            score += 1
+        else:
+            print("Wrong, that wasn't the answer.")
     time.sleep(1)
     loop += 1
     if loop != 11:
