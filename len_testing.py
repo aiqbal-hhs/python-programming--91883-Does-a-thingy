@@ -8,10 +8,12 @@ while loop != 11:
         userinput = input("input a word: ")
         userinput = userinput.strip()
         userinput = userinput.lower()
+        # checks if userinport has any number or letter
         if(len(userinput)):
             check = True
             print("gegegege")
         else:
             check = False
+            print("nerd")
         loop += 1
     check = False
