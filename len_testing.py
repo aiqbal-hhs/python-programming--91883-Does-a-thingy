@@ -11,7 +11,7 @@ while loop != 11:
         # checks if userinport has any number or letter
         if(len(userinput)):
             check = True
-            print("gegegege")
+            print("correct")
         else:
             check = False
             print("nerd")
