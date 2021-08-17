@@ -112,25 +112,25 @@ while loop != 11:
         userinput = input(questions[num])
         userinput = userinput.strip()
         userinput = userinput.lower()
+        # lower var num to check answer - I have one less answer than question
+        num -= 1
         if(len(userinput)):
-            print(questions[num])
-            check = False
-        else:
             check = True
-    # lower var num to check answer - I have one less answer than question
-    num -= 1
-    # checks if userinput is one of the answers for that question
-        if userinput in answers[num]:
-            print("Correct, {}".format(statements[num]))
-            print("You get {} point!".format(langone[selectone]))
-            score += 1
+            # checks if userinput is one of the answers for that question
+            if userinput in answers[num]:
+                print("Correct, {}".format(statements[num]))
+                print("You get {} point!".format(langone[selectone]))
+                score += 1
+            else:
+                print("Wrong, that wasn't the answer.")
         else:
-            print("Wrong, that wasn't the answer.")
+            check = False
     time.sleep(1)
     loop += 1
     if loop != 11:
         place += 1
         num = selection[place]
+    check = False
 
 # End of quiz - Scoring and responce
 if score == 0:
