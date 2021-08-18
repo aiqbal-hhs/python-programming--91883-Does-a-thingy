@@ -133,6 +133,7 @@ while loop != 11:
     check = False
 
 # End of quiz - Scoring and responce
+# sets respon acording to score
 if score == 0:
     respon = "Maybe you should study some classics sometime."
 elif score >= 1 and score <= 3:
@@ -144,6 +145,6 @@ elif score >= 7 and score <= 9:
 elif score == 10:
     respon = "Damn, well, umm, Congratulations! You've earned it! :)"
 else:
-    respone = "How did you do it, you big cheater?"
-
-print(respon)
+    respon = "How did you do it, you big cheater?"
+# Gives user score and responce
+print(respon, "\n you got {} points".format(score))
