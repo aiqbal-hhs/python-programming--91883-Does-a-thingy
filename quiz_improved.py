@@ -81,6 +81,9 @@ statements = "zero", stateone, statetwo, statethree, statefour
 statement = statefive, statesix, stateseven, stateight, statenine, stateten
 staements.extend(statement)
 
+# end of the set up
+# Start of the quiz
+
 # asking name and welcome print - provide Quiz info and topic
 name = input(questions[0])
 
@@ -88,9 +91,9 @@ print("Welcome to this quiz {}!".format(name))
 time.sleep(0.5)
 print("This quiz is about classical history")
 print("It inolves mythology, science, and historical figures.")
-print("This quiz was made by me, Oliver MacClure.")
+print("This quiz was made by Oliver MacClure.")
 
-time.sleep(3.333)
+time.sleep(3)
 
 # loop ask start quiz
 start = ""
@@ -107,6 +110,7 @@ while start != "yes":
 # Question asking loop
 # Check loop number under 11
 while loop != 11:
+    # this while loop is looking for if the answer is blank
     while check is False:
         # ask input - then lower and remove spaces
         userinput = input(questions[num])
@@ -114,19 +118,26 @@ while loop != 11:
         userinput = userinput.lower()
         # lower var num to check answer - I have one less answer than question
         num -= 1
+        # this if is cheacking if userinput is empty
         if(len(userinput)):
             check = True
             # checks if userinput is one of the answers for that question
             if userinput in answers[num]:
+                # when the answer is correct this code will run
                 print("Correct, {}".format(statements[num]))
                 print("You get {} point!".format(langone[selectone]))
                 score += 1
             else:
+                # when the answer is wrong this code will run
                 print("Wrong, that wasn't the answer.")
+        # this else is for empty userinput
         else:
             check = False
+    # this is for after the while false loop
     time.sleep(1)
     loop += 1
+    # this  checks if the loop is lower than 11
+    # the code breaks if place excedes 10
     if loop != 11:
         place += 1
         num = selection[place]
@@ -144,6 +155,7 @@ elif score >= 7 and score <= 9:
     respon = "WOW! thats like really really good!"
 elif score == 10:
     respon = "Damn, well, umm, Congratulations! You've earned it! :)"
+# this is for if someone gets more than 10 or less than 0
 else:
     respon = "How did you do it, you big cheater?"
 # Gives user score and responce
