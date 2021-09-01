@@ -18,7 +18,7 @@ selectone = random.randint(0, 7)
 langone = "Tahi", "One", "Uno", "Vienas", "Une", "Unus", "ένας"
 
 # question list
-naneq = "What is your name? \n"
+nameq = "What is your name? \n"
 startq = "Are we ready to start? \n"
 firsq = "Who's the king of the Greek titans?:\nKronos, Zeus, Gaea, or Saturn\n"
 secondq = "True or False: The Romans invented the aqueduct? \n"
@@ -30,14 +30,13 @@ Mount Olympus, The Underworld, Crete, or Africa
 sixthq = "Name one famous ancient Greek philosopher: \n"
 seventhq = """Romans are known to steal, then develop
 inventions, architecture, and more.
-What is one of their inventions?
-"""
-eightq = "What is the earliest form of recorded astronomy? \n"
+What is one of their inventions? \n"""
+eigthq = "What is the earliest form of recorded astronomy? \n"
 ninthq = "Who is the founder of Rome? \n"
 tenthq = "Name one ship that the Romans primarily used: \n"
 
 # Stacko taco questo
-questions = [nameq, startq, firstq, secondq, thirdq, fourthq]
+questions = [nameq, startq, firsq, secondq, thirdq, fourthq]
 otherhalf = [fifthq, sixthq, seventhq, eigthq, ninthq, tenthq]
 questions.extend(otherhalf)
 
@@ -79,7 +78,7 @@ stateten = "That is one of three ships that they primarily used."
 # condensing the statements into one
 statements = "zero", stateone, statetwo, statethree, statefour
 statement = statefive, statesix, stateseven, stateight, statenine, stateten
-staements.extend(statement)
+statements.extend(statement)
 
 # end of the set up
 # Start of the quiz
