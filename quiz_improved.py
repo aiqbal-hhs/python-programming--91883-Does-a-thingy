@@ -111,7 +111,7 @@ while start != "yes":
 while loop != 11:
     # this while loop is looking for if the answer is blank
     while check is False:
-        # ask input - then lower and remove spaces
+        # ask input - then lowering letters and remove spaces
         userinput = input(questions[num])
         userinput = userinput.strip()
         userinput = userinput.lower()
@@ -129,10 +129,10 @@ while loop != 11:
             else:
                 # when the answer is wrong this code will run
                 print("Wrong, that wasn't the answer.")
-        # this else is for empty userinput
+        # this else is for if there is an empty userinput
         else:
             check = False
-    # this is for after the while false loop
+    # this is for after the checking for answer and input
     time.sleep(1)
     loop += 1
     # this  checks if the loop is lower than 11
