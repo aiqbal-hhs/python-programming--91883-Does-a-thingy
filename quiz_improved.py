@@ -2,7 +2,7 @@
 import time
 import random
 
-selection = 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+selection = 4, 2, 3, 11, 6, 10, 8, 9, 5, 7
 preshuffle = list(selection)
 random.shuffle(preshuffle)
 selection = tuple(preshuffle)
@@ -20,7 +20,7 @@ langone = "Tahi", "One", "Uno", "Vienas", "Une", "Unus", "ένας"
 # question list
 nameq = "What is your name? \n"
 startq = "Are we ready to start? \n"
-firsq = "Who's the king of the Greek titans?:\nKronos, Zeus, Gaea, or Saturn\n"
+firsq = "Who's the king of the Greek Titans?:\nKronos, Zeus, Gaea, or Saturn\n"
 secondq = "True or False: The Romans invented the aqueduct? \n"
 thirdq = "How many tasks does Hecules proform? \n"
 fourthq = "The Roman god Cupid is the depiction of which Greek god? \n"
@@ -45,7 +45,7 @@ onea = "kronos", "cronos", "cronus"
 twoa = "false"
 threea = "12"
 foura = "eros"
-fivea = "the underworld"
+fivea = "the underworld", "underworld", "under world"
 sixa = ["socrates", "socrate", "plato", "aristotle", "thale", "pythagoras"]
 sixb = ["democritus", "empedokles", "anaxagoras", "anaximander", "epicurus"]
 sixa.extend(sixb)
@@ -55,9 +55,9 @@ ninea = "romulus", "romulus and remus", "remus and romulus"
 tena = "trireme", "quadrireme", "quinquereme"
 
 # stack all answers together
-answers = "yes", onea, twoa, threea, foura, fivea
-answerssecond = sixa, sevena, eighta, ninea, tena
-answers.extend(answerssecond)
+answers = ["yes", onea, twoa, threea, foura, fivea]
+answers2 = sixa, sevena, eighta, ninea, tena
+answers.extend(answers2)
 
 # correct statements
 stateone = "Kronos is the father of the greek gods and king of the titans!"
@@ -76,7 +76,7 @@ statenine = "Romulus and Remus founded Rome \n but Romulus soon killed remus."
 stateten = "That is one of three ships that they primarily used."
 
 # condensing the statements into one
-statements = "zero", stateone, statetwo, statethree, statefour
+statements = ["zero", stateone, statetwo, statethree, statefour]
 statement = statefive, statesix, stateseven, stateight, statenine, stateten
 statements.extend(statement)
 
@@ -107,11 +107,11 @@ while start != "yes":
         time.sleep(5)
 
 # Question asking loop
-# Check loop number under 11
-while loop != 11:
+# Check loop number under 10
+while loop != 10:
     # this while loop is looking for if the answer is blank
     while check is False:
-        # ask input - then lowering letters and remove spaces
+        # ask input - then remove spaces and lowering letters
         userinput = input(questions[num])
         userinput = userinput.strip()
         userinput = userinput.lower()
@@ -125,6 +125,7 @@ while loop != 11:
                 # when the answer is correct this code will run
                 print("Correct, {}".format(statements[num]))
                 print("You get {} point!".format(langone[selectone]))
+                selectone = random.randint(0, 7)
                 score += 1
             else:
                 # when the answer is wrong this code will run
@@ -135,9 +136,9 @@ while loop != 11:
     # this is for after the checking for answer and input
     time.sleep(1)
     loop += 1
-    # this  checks if the loop is lower than 11
-    # the code breaks if place excedes 10
-    if loop != 11:
+    # this checks if the loop is lower than 10
+    # the code breaks if [place] excedes 9
+    if loop != 10:
         place += 1
         num = selection[place]
     check = False
