@@ -15,7 +15,7 @@ userinput = ""
 selectone = random.randint(0, 7)
 
 # one in different languages
-langone = "Tahi", "One", "Uno", "Vienas", "Une", "Unus", "ένας"
+langone = "Tahi", "One", "Uno", "Vienas", "Une", "Unus", "ένας", "ceann"
 
 # question list
 nameq = "What is your name? \n"
@@ -115,11 +115,11 @@ while loop != 10:
         userinput = input(questions[num])
         userinput = userinput.strip()
         userinput = userinput.lower()
-        # lower var num to check answer - I have one less answer than question
-        num -= 1
         # this if is cheacking if userinput is empty
         if(len(userinput)):
             check = True
+            # lower var num to check answer - I have one less answer than question
+            num -= 1
             # checks if userinput is one of the answers for that question
             if userinput in answers[num]:
                 # when the answer is correct this code will run
