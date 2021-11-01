@@ -156,6 +156,7 @@ elif score >= 7 and score <= 9:
 elif score == 10:
     respon = "Damn, well, umm, Congratulations! You've earned it! :)"
 # this is for if someone gets more than 10 or less than 0
+# both -1 and 11 are impossible due to my +1 or +0 points
 else:
     respon = "How did you do it, you big cheater?"
 # Gives user score and responce
