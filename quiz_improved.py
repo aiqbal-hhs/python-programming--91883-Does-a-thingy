@@ -41,13 +41,14 @@ otherhalf = [fifthq, sixthq, seventhq, eigthq, ninthq, tenthq]
 questions.extend(otherhalf)
 
 # answer list
+starta = "yes"
 onea = "kronos", "cronos", "cronus"
 twoa = "false"
 threea = "12"
 foura = "eros"
 fivea = "the underworld", "underworld", "under world"
 sixa = ["socrates", "socrate", "plato", "aristotle", "thale", "pythagoras"]
-sixb = ["democritus", "empedokles", "anaxagoras", "anaximander", "epicurus"]
+sixb = "democritus", "empedokles", "anaxagoras", "anaximander", "epicurus"
 sixa.extend(sixb)
 sevena = "concrete", "underfloor heating", "heating", "house heating"
 eighta = "babylonian", "babylon"
@@ -55,7 +56,7 @@ ninea = "romulus", "romulus and remus", "remus and romulus"
 tena = "trireme", "quadrireme", "quinquereme"
 
 # stack all answers together
-answers = ["yes", onea, twoa, threea, foura, fivea]
+answers = [starta, onea, twoa, threea, foura, fivea]
 answers2 = sixa, sevena, eighta, ninea, tena
 answers.extend(answers2)
 

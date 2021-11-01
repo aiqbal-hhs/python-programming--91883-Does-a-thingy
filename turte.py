@@ -1,11 +1,11 @@
 import turtle
-sara = turtle.turtle()
+sara = turtle.Turtle()
 sara.shape("turtle")
 
 khris = sara.clone()
 
 khris.pencolor("red")
-Khris.circle(30)
+khris.circle(30)
 
 sara.pencolor("yellow")
 sara.lt(180)
