@@ -37,7 +37,7 @@ tenthq = "Name one ship that the Romans primarily used: \n"
 
 # Stacko taco questo
 questions = [nameq, startq, firsq, secondq, thirdq, fourthq]
-otherhalf = [fifthq, sixthq, seventhq, eigthq, ninthq, tenthq]
+otherhalf = fifthq, sixthq, seventhq, eigthq, ninthq, tenthq
 questions.extend(otherhalf)
 
 # answer list
@@ -100,8 +100,8 @@ time.sleep(3)
 start = ""
 while check is False:
     start = input(questions[1])
-    start.lower()
-    start.strip()
+    start = start.lower()
+    start = start.strip()
     if start == answers[0]:
         print("righty-O then, lets get started!")
         check = True
