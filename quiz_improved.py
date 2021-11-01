@@ -100,8 +100,8 @@ time.sleep(3)
 start = ""
 while check is False:
     start = input(questions[1])
-    start.strip()
     start.lower()
+    start.strip()
     if start == answers[0]:
         print("righty-O then, lets get started!")
         check = True
