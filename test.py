@@ -27,11 +27,6 @@ father_mother_age = father_age - mother_age
 print('you were born in {} or {}. your father was {} when you were born and your mother was {}. your father is {} years older than your mother.'.format(early_year, late_year, father_born_age, mother_born_age, father_mother_age))
 
 number_start = int(input('what is a good number between 0 and 10,000?'))
-number = number_start * 9.3
-number = number - 300
-while number >= 50:
-    number -= 26.4
-    number /= 3.2
-    number += 14
-    number *= 1.5
+if (number_start % 2) == 0
+    number_start 
     print(number)
