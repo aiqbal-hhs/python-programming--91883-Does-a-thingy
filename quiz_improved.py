@@ -98,15 +98,19 @@ time.sleep(3)
 
 # loop ask start quiz
 start = ""
-while start != answers[0]:
+while check is False:
     start = input(questions[1])
     start.strip()
     start.lower()
     if start == answers[0]:
         print("righty-O then, lets get started!")
+        check = True
     else:
         print("Okay, i'll wait.")
         time.sleep(5)
+        check = False
+
+check = False
 
 # Question asking loop
 # Check loop number under 10
