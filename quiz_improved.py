@@ -77,6 +77,7 @@ statenine = "Romulus and Remus founded Rome \n but Romulus soon killed remus."
 stateten = "That is one of three ships that they primarily used."
 
 # condensing the statements into one
+# Note - "zero" is used as a filler to save some hassle
 statements = ["zero", stateone, statetwo, statethree, statefour]
 statement = statefive, statesix, stateseven, stateight, statenine, stateten
 statements.extend(statement)
@@ -97,7 +98,7 @@ time.sleep(3)
 
 # loop ask start quiz
 start = ""
-while start != "yes":
+while start != answers[0]:
     start = input(questions[1])
     start.strip()
     start.lower()
