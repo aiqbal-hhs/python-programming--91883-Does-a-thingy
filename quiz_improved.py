@@ -105,9 +105,10 @@ while check is False:
     if start == answers[0]:
         print("righty-O then, lets get started!")
         check = True
+        time.sleep(0.5)
     else:
         print("Okay, i'll wait.")
-        time.sleep(5)
+        time.sleep(3)
         check = False
 
 check = False
@@ -140,7 +141,7 @@ while loop != 10:
         else:
             check = False
     # this is for after the checking for answer and input
-    time.sleep(1)
+    time.sleep(0.5)
     loop += 1
     # this checks if the loop is lower than 10
     # the code breaks if [place] excedes 9
