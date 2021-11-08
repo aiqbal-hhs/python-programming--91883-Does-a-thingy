@@ -103,7 +103,7 @@ while check is False:
     start = start.lower()
     start = start.strip()
     if start == answers[0]:
-        print("righty-O then, lets get started!")
+        print("righty-O then, let's get started!")
         check = True
         time.sleep(0.5)
     else:
