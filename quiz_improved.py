@@ -43,9 +43,9 @@ questions.extend(otherhalf)
 # answer list
 starta = "yes"
 onea = "kronos", "cronos", "cronus"
-twoa = "false"
-threea = "12"
-foura = "eros"
+twoa = "false", "f"
+threea = "12", "12", "12"
+foura = "eros", "eros"
 fivea = "the underworld", "underworld", "under world"
 sixa = ["socrates", "socrate", "plato", "aristotle", "thale", "pythagoras"]
 sixb = "democritus", "empedokles", "anaxagoras", "anaximander", "epicurus"
