@@ -1,23 +1,21 @@
 import turtle
+import random
+
+Screen = turtle.screen
 sara = turtle.Turtle()
+sara.speed(random.randint(1, 4))
 sara.shape("turtle")
-
 khris = sara.clone()
+khris.speed(random.randint(1, 4))
+x = False
 
-khris.pencolor("red")
-khris.circle(30)
+Screen.title("Turtle Enclosure")
 
-sara.pencolor("yellow")
-sara.lt(180)
-sara.circle(15)
-
-sara.penup()
-sara.goto(30, 0)
-sara.pendown()
-sara.fd(20)
-sara.rt(45)
-sara.fd(10)
-sara.lt(50)
-sara.fd(17)
-sara.lt(85)
-sara.bk(27)
+while x is False:
+  if Screen.height() - sara.xcor() = 0 or Screen.height() - sara.xcor() = Screen.height():
+    sara.heading(0, 0)
+  sara.lt(random.randint(-45, 45))
+  sara.fd(random.randint(0, 10))
+  khris.lt(random.randint(-45, 45))
+  khris.fd(random.randint(0, 10))
+  
