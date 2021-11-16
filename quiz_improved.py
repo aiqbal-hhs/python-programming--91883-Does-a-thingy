@@ -77,7 +77,7 @@ statenine = "Romulus and Remus founded Rome \n but Romulus soon killed remus."
 stateten = "That is one of three ships that they primarily used."
 
 # condensing the statements into one
-# Note - "zero" is used as a filler to save some hassle
+# Note - "zero" is used as a filler to save some later hassle
 statements = ["zero", stateone, statetwo, statethree, statefour]
 statement = statefive, statesix, stateseven, stateight, statenine, stateten
 statements.extend(statement)
@@ -96,7 +96,7 @@ print("This quiz was made by Oliver MacClure.")
 
 time.sleep(3)
 
-# loop ask start quiz
+# loop - asking to start quiz
 start = ""
 while check is False:
     start = input(questions[1])
@@ -123,6 +123,7 @@ while loop != 10:
         userinput = userinput.strip()
         userinput = userinput.lower()
         # this if is cheacking if userinput is empty
+        # stops people from leaving the question blank
         if(len(userinput)):
             check = True
             # lower var num to check answer - I have one less answer than question
@@ -164,6 +165,7 @@ elif score == 10:
     respon = "Damn, well, umm, Congratulations! You've earned it! :)"
 # this is for if someone gets more than 10 or less than 0
 # both -1 and 11 are impossible due to my +1 or +0 points
+# with only ten questions avaliable
 else:
     respon = "How did you do it, you big cheater?"
 # Gives user score and responce
