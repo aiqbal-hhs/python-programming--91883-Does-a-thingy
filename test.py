@@ -26,7 +26,14 @@ father_mother_age = father_age - mother_age
 
 print('you were born in {} or {}. your father was {} when you were born and your mother was {}. your father is {} years older than your mother.'.format(early_year, late_year, father_born_age, mother_born_age, father_mother_age))
 
+true = False
 number_start = int(input('what is a good number between 0 and 10,000?'))
-if (number_start % 2) == 0
-    number_start 
-    print(number)
+while true == False:
+    if number_start >= 0:
+        number_start /= 3.14
+        number_start *= 1.45
+        print(number_start)
+    else:
+        true = True
+else:
+    print("kaboom")

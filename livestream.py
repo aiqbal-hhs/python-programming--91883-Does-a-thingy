@@ -39,22 +39,22 @@ second.lt(random.randint(0, 359))
 
 while x is False:
     # must find how to turn turtles around
-    if first.xcor() >= 200 or first.xcor() <= -200:
+    if first.xcor() >= 190 or first.xcor() <= -190:
         fangle == first.towards(0, 0)
         first.lt(fangle)
-        first.fd(10)
-    if first.ycor() >= 200 or first.ycor() <= -200:
+        first.fd(5)
+    if first.ycor() >= 190 or first.ycor() <= -190:
         fangle == first.towards(0, 0)
         first.lt(fangle)
-        first.fd(10)
-    if second.xcor() >= 200 or second.xcor() <= -200:
+        first.fd(5)
+    if second.xcor() >= 190 or second.xcor() <= -190:
         sangle == second.towards(0, 0)
         second.lt(sangle)
-        second.fd(10)
-    if second.ycor() >= 200 or second.ycor() <= -200:
+        second.fd(5)
+    if second.ycor() >= 190 or second.ycor() <= -190:
         sangle == second.towards(0, 0)
         second.lt(sangle)
-        second.fd(10)
+        second.fd(5)
     first.fd(random.randint(0, 6))
     first.lt(random.randint(-40, 40))
     first.speed(random.randint(1, 2))
