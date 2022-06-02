@@ -1,18 +1,19 @@
 import turtle
 import random
 
-Screen = turtle.screen()
+screen = turtle.Screen()
 sara = turtle.Turtle()
-sara.speed(random.randint(1, 4))
+sara.speed(random.randint(0, 4))
 sara.shape("turtle")
 khris = sara.clone()
-khris.speed(random.randint(1, 4))
+khris.speed(random.randint(0, 4))
 x = False
 
-Screen.title("Turtle Enclosure")
+screen.title("Turtle Enclosure")
+screen.setup(width = 450, height = 450)
 
 while x is False:
-  if Screen.height() - sara.xcor() == 0 or Screen.height() - sara.xcor() == Screen.height():
+  if x is True:
     sara.heading(0, 0)
   sara.lt(random.randint(-45, 45))
   sara.fd(random.randint(0, 10))

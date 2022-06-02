@@ -119,9 +119,7 @@ while loop != 10:
     # this while loop is looking for if the answer is blank
     while check is False:
         # ask input - then remove spaces and lowering letters
-        userinput = input(questions[num])
-        userinput = userinput.strip()
-        userinput = userinput.lower()
+        userinput = input(questions[num]).strip().lower()
         # this if is cheacking if userinput is empty
         # stops people from leaving the question blank
         if(len(userinput)):
