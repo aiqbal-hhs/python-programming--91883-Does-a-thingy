@@ -67,17 +67,20 @@ box.begin_fill()
 box.circle(6)
 box.end_fill()
 
-box.width(5)
-box.color('black')
+box.color('brown')
 box.penup()
-box.ht()
-box.goto(-220, -220)
+box.goto(-200, -180)
 box.pendown()
 b = 0
-while b != 4:
-    box.fd()
-    box.rt()
+box.rt(23)
+box.begin_fill()
+while b != 2:
+    box.fd(60)
+    box.rt(90)
+    box.fd(15)
+    box.rt(90)
     b += 1
+box.end_fill()
 
 # navigation is pick random
 # can you use turtle.Turtle() to control all of the turtles?
